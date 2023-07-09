@@ -39,7 +39,7 @@ public class VersioningPersonController {
         return new PersonV2(new Name("Bob", "Charlie"));
     }
 
-    /* ...Media Type Versioning...*/
+    /* ...Content Negotiation Versioning...*/
     @GetMapping(path = "/person/accept", produces = "application/vnd.company.app-v1+json")
     public PersonV1 getFirstVersionOfPersonAcceptHeader() {
         return new PersonV1("Bob Charlie");
